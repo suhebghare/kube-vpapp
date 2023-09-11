@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       name: vprodb
-  replica: 1
+  replicas: 1
   template:
     metadata:
       labels:
@@ -37,7 +37,7 @@ spec:
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
-            volumeId: vol-013f9e928286f57ad
+            volumeID: vol-013f9e928286f57ad
             fsType: ext4
 ---
 kind: Service
