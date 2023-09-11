@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: vprodb
+      app: vprodb
   replicas: 1
   template:
     metadata:
