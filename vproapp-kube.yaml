@@ -24,10 +24,10 @@ spec:
       initContainers:
         - name: init-mysql
           image: busybox
-          commands: ['sh', '-c', 'until nslookup vprodb; do echo waiting for mydb; sleep 2; done;']
+          command: ['sh', '-c', 'until nslookup vprodb; do echo waiting for mydb; sleep 2; done;']
         - name: init-memcache
           image: busybox
-          commands: [ 'sh', '-c', 'until nslookup vprocache01; do echo waiting for memcached; sleep 2; done;']
+          command: [ 'sh', '-c', 'until nslookup vprocache01; do echo waiting for memcached; sleep 2; done;']
 ---
 kind: Service
 apiVersion: v1
