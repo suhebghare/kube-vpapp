@@ -27,7 +27,7 @@ spec:
                 secretKeyRef:
                   name: app-secret
                   key: rmq-pass
-            - name: RABBITMQ_DEFAULT_PASS
+            - name: RABBITMQ_DEFAULT_USER
               value: "guest"
 ---
 kind: Service
