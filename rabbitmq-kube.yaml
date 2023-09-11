@@ -1,6 +1,6 @@
 ---
 kind: Deployment
-apiVersion: v1
+apiVersion: apps/v1
 metadata:
   name: vpromq01
   labels:
@@ -38,7 +38,7 @@ metadata:
 spec:
   ports:
     - port: 15672
-      containerPort: vpromq01-port
+      targetPort: vpromq01-port
       protocol: TCP
   selector:
     app: vpromq01
