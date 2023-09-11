@@ -7,10 +7,9 @@ metadata:
     app: vproapp
 spec:
   replicas: 1
-  metadata:
-    selector:
-      matchLabels:
-        app: vproapp
+  selector:
+    matchLabels:
+      app: vproapp
   spec:
     containers:
       - name: vproapp
